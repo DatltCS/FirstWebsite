@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* logo */
+nav a.navbar-brand {
+    margin-right: 250px;
+}
+
+nav a.navbar-brand img {
+    width: 70px;
+}
+
+/* icon size */
+.bi {
+    font-size: 22px;
+}
+
+/* resize img into slide show */
+.img-slideShow {
+    width: 100%;
+    height: 500px;
+    background-color: #f8f9fa;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* chỉnh màu */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: blueviolet;
+}
+
+.footer span, .footer a {
+    margin: 0 4px;
+    font-size: medium;
+}
+
+.footer {
+    margin-top: 15px;
+}
+
+.card img {
+    max-height: 200px;
+    width: max-content;
+    margin: 0 auto;
+    /* chỉnh tốc độ phóng to */
+    transition: transform .2s;
+}
+
+/* hieu ung zoom */
+/* 1.1 tức là phóng to 10% ảnh gốc */
+/* 1.2 tức là phóng to 20% ảnh gốc */
+.card img:hover {
+    transform: scale(1.1);
+}

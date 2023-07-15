@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- style.css -->
+    <link rel="stylesheet" href="./static/style.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- BEGIN HEADER -->
+    <div class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="./static/img/logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <form class="d-flex flex-grow-1 me-5">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                                aria-controls="offcanvasExample">
+                                <i class="bi bi-cart3"></i> My Cart
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> User
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END HEADER -->
+        <!-- BEGIN MENU -->
+        <ul class="nav nav-pills mb-3 justify-content-center bg-light" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Trang chủ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-men-tab" data-bs-toggle="pill" data-bs-target="#pills-men"
+                    type="button" role="tab" aria-controls="pills-men" aria-selected="false" onclick="showItem(1)">Thời
+                    trang Nam</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-woman-tab" data-bs-toggle="pill" data-bs-target="#pills-men"
+                    type="button" role="tab" aria-controls="pills-men" aria-selected="false" onclick="showItem(2)">Thời
+                    trang nữ</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-kid-tab" data-bs-toggle="pill" data-bs-target="#pills-men"
+                    type="button" role="tab" aria-controls="pills-men" aria-selected="false" onclick="showItem(3)">Thời
+                    trang trẻ em</button>
+            </li>
+        </ul>
+    </div>
+    <!-- END MENU -->
+    <!-- BEGIN CONTENT ON TABS -->
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <div class="container">
+                <h4 class="text-center">Sản phẩm mới</h4>
+                <!-- BEGIN SLIDE SHOW ITEM -->
+                <div id="slideShowHomePage" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#slideShowHomePage" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#slideShowHomePage" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#slideShowHomePage" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <!-- đổ dữ liệu bằng .js -->
+                    <div class="carousel-inner" id="home-slide-show"></div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#slideShowHomePage"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#slideShowHomePage"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- END SLIDE SHOW ITEM -->
+                <!-- BEGIN PRODUCT -->
+                <hr>
+                <h4 class="text-center">Danh mục</h4>
+                <div class="row g-0 text-end">
+                    <div class="col-md-4">
+                        <img src="./static/img/Somi_Nam/1/1.png" style="max-height:200px;"
+                            class="img-fluid rounded-start" alt="men">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Thời trang nam</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-0 text-start bg-light">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Thời trang nữ</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./static/img/Dress/33689096_2088443938066466_9084957880993447936_n.jpg"
+                            style="max-height:200px;" class="img-fluid rounded-start" alt="women">
+                    </div>
+                </div>
+                <br>
+                <div class="row g-0 text-end">
+                    <div class="col-md-4">
+                        <img src="./static/img/T-Shirt/53344647_2301200796870022_4103989513599057920_n.jpg"
+                            style="max-height:200px;" class="img-fluid rounded-start" alt="kid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Thời trang trẻ em</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PRODUCT -->
+                <hr>
+                <h4 class="text-center mb-5">Về chúng tôi</h4>
+                <div class="row mb-5">
+                    <div class="col-sm-6 text-center">
+                        <img src="./static/img/logo.png" alt="logo" style="max-height: 150px" class="img">
+                    </div>
+                    <div class="col-sm-6 text-start">
+                        <p><i>Hành trình 20 năm đem lại niềm vui mua sắm</i></p>
+                        <p>Năm 2002, Công ty TNHH MTV e-commerce được thành lập với mục đích ban đầu là hoạt động
+                            trong lĩnh vực sản xuất hàng thời trang.</p>
+                        <p>Năm 2014 thương hiệu thời trang ECM ra đời, tự hào trở thành một cột mốc đáng nhớ của
+                            doanh nghiệp Việt trong ngành thời trang.</p>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-sm-6 text-start">
+                        <h4 class="mb-4">Tầm nhìn và sứ mệnh</h4>
+                        <p><i>Mang đến niềm vui cho hàng triệu gia đình Việt</i></p>
+                        <p>ECM hướng đến mục tiêu mang lại niềm vui mặc mới mỗi ngày cho hàng triệu người tiêu
+                            dùng Việt. Chúng tôi tin rằng người dân Việt Nam cũng đang hướng đến một cuộc sống năng
+                            động, tích cực hơn.</p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <img src="./static/img/logo.png" alt="logo" style="max-height: 150px" class="img">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="pills-men" role="tabpanel" aria-labelledby="pills-men-tab">
+            <div class="row">
+                <div class="col-sm-3 text-start border p-5 bg-light text-dark">
+                    <h5>Danh mục sản phẩm</h5>
+                    <hr>
+                    <div class="list-group list-group-flush" id="cateItem">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row row-cols-1 row-cols-sm-4" id="list-item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT ON TABS -->
+    <!-- BEGIN FOOTER -->
+    <div class="container-fluid bg-dark text-light footer">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="p-3">&copy;2021 ECM</p>
+            </div>
+            <div class="col-sm-6 d-flex justify-content-end align-items-center p-3">
+                <span>Visit us:</span>
+                <a href="http://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <!-- BEGIN CART -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">My Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="cart-body"></div>
+        <div class="offcanvas-footer d-flex bg-light" id="cart-footer">
+            <p class="p-2 m-2 flex-grow-1" id="tongCong">Tổng cộng : 0 VNĐ</p>
+            <button class="p-2 m-2 btn btn-primary" onclick="thanhToan()">Thanh toán</button>
+        </div>
+    </div>
+    <!-- END CART -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" id="productDetail">
+            </div>
+        </div>
+    </div>
+    <!-- custom.js -->
+    <script src="./static/custom.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
